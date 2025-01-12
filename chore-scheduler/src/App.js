@@ -1,25 +1,26 @@
 import logo from './logo.svg';
 import './App.css';
+import { fetchChores } from '../../backend/models/csFirebase';
 
-function App() {
+const ChoreList = () => {
+  //create a state so we can use that variable to display stuff and the updateState to update it 
+  const [chores, setChores] = useState([]);
+  useEffect(() => { //useEffect itself is not an async function so you need to define a function thats async within and call it
+    const getChores = async () => {
+      const totalChores = await fetchChores();
+      setChores(totalChores);
+    }
+    getChores();
+  }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {chores.map((chore, index) => (
+      <div key={index} className="chore-box">
+        <h3>{chore.name}</h3>
+        <p>{chore.description}</p>
+      </div>
+    ))}
     </div>
   );
-}
-
-export default App;
+};
+export default ChoreList;
