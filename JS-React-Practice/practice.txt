@@ -1,0 +1,95 @@
+export default function DoSomething(){
+
+}
+
+// same thing as function but can export function to another file
+export const DoSomething = () => {
+
+}
+
+const MyComponent = () => {
+    return <div> </div>
+}
+
+// anonymous function
+<button 
+  onClick={() => {
+    console.log('clicked');
+  }}
+></button>
+
+// conditions using turnary operator
+let age = 10;
+// if condition is true, do this
+let name = age > 10 && "mike";
+// if condition is false, do this
+let meow = age > 10 || "mike";
+// if else condition
+let gyatt = age > 10 ? "mike" : "not mike";
+
+const Component = () => {
+    return age > 10 ? <div> Mike </div> : <div> Not Mike </div>
+}
+
+// --------------------------------- //
+// objects (hashtable ditionary etc)
+
+const name = "Mike";
+const age = 20;
+
+const person = {
+    name: "Mike",
+    age: 20,
+    isMarried: false
+};
+
+// if var is already defined
+const person = {
+    name,
+    age,
+    isMarried: false
+};
+
+// dont do this
+const name = person.name;
+const age = person.age;
+const isMarried = person.isMarried;
+
+// do this
+const {name, age, isMarried} = person;
+
+// duplicate person 1 but you can change property
+const person2 = {...person, name: "Jack"}
+
+// array
+const names = ["Mike", "Jack", "John"];
+// add someone
+const names2 = [...names, "Meow"];
+
+// maps filter etc
+let names = ["Mike", "Jack", "John"];
+.map()
+.filter()
+
+names.map((name) => {
+    console.log(name)
+    // outputs Mike Jack John
+    return "Joe"
+    // outputs Joe Joe Joe
+    return name + "1"
+    // outputs Mike1 Jack1 John1
+})
+
+names.map((name)) => {
+    // returns a header for each name
+    return <h1> {name} </h1>
+}
+
+let names = ["Mike", "Jack", "John", "Pedro", "Pedro"];
+names.filter((name) => {
+    return name !== "Pedro"
+})
+
+// --------------------------------- //
+
+// async + await + fetch
