@@ -10,7 +10,18 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-scripts": "5.0.1",
+<<<<<<< HEAD
     "web-vitals": "^2.1.4"
+=======
+    "web-vitals": "^2.1.4",
+    "expo": "^52.0.25",
+    "react-native-web": "^0.19.13"
+  },
+  "devDependencies": {
+    "@types/react": "~18.3.12",
+    "@types/react-native": "^0.72.8",
+    "typescript": "^5.7.3"
+>>>>>>> 9d03f3ae2bd2db8816cb8cf6a4448e46f2f319c1
   },
   "scripts": {
     "start": "react-scripts start",
@@ -35,9 +46,12 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+<<<<<<< HEAD
   },
   "devDependencies": {
     "@types/react-native": "^0.72.8",
     "@react-native-community/cli": "latest"
+=======
+>>>>>>> 9d03f3ae2bd2db8816cb8cf6a4448e46f2f319c1
   }
 }
